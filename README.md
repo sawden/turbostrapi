@@ -1,3 +1,5 @@
+> :construction: **WIP**: A ready to use TurboStrapi is around the corner!
+
 # TurboStrapi: The Strapi & Next.js Monorepo Starter
 
 ![TurboStrapi](https://github-production-user-asset-6210df.s3.amazonaws.com/36924392/277128068-6fc3f7df-0e57-45be-bf3c-90b2c0f6e646.gif)
@@ -15,44 +17,39 @@ TurboStrapi is not just another starter. It's your gateway to seamless web devel
 
 Discover the pre-configured goodies TurboStrapi brings to your table:
 
-- 🌐 **Strapi**: Fully typed with a demo.
-
-- 🔥 **Next.js**: Already connected to Strapi via an API service.
-
+- 🚧 🌐 **Strapi**: Fully typed with a demo.
+- 🚧 🔥 **Next.js**: Already connected to Strapi via an API service.
 - 💼 **Turborepo**: Pre-configured, ready to go.
-
 - 🎨 **Tailwind CSS**: Shared configuration ensuring consistent styles.
-
 - 🎡 **CVA & tailwind-merge**: Tailwind variants made easy.
-
 - 🛠️ **Code Quality**: Out-of-the-box ESLint, Prettier, and TypeScript.
-
-- ⚙️ **.env**: Centralized `.env` file, validated using [Zod](https://zod.dev/).
+- 🚧 ⚙️ **.env**: Centralized `.env` file, validated using [Zod](https://zod.dev/).
+  > 🚧 WIP: Stay tuned!
 
 ## 🚀 Get Up and Running
 
 1. **Grab the Code**
-   
+
    ```bash
    git clone https://github.com/sawden/turbostrapi.git
    ```
 
 2. **Set Things Up**
-   
+
    ```bash
    yarn
    ```
 
 3. **Launch**
-   
+
    Light up both Strapi and Next.js:
-   
+
    ```bash
    yarn dev
    ```
 
 4. **Witness Magic**
-   
+
    Visit frontend [http://localhost:3000](http://localhost:3000) and backend [http://localhost:1337](http://localhost:1337).
 
 ## 🗂️ Project Structure
@@ -79,8 +76,6 @@ root/
 ```
 
 > This starter uses `@turbostrapi` as the package namespace. You can easily replace it globally through search and replace with a namespace of your choice.
-
-
 
 ## 🏎️ Remote Caching
 

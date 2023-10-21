@@ -24,10 +24,10 @@
     "prettier": "^3.0.3",
     "turbo": "^1.10.14"
   },
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "yarn@1.22.0",
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=9.0.0",
-    "yarn": ">=1.22.19"
+    "yarn": ">=1.22.0"
   }
 }

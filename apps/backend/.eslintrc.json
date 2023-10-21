@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "extends": ["@turbostrapi/eslint-config/base"],
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "browser": false
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": false
+    }
+  },
+  "globals": {
+    "strapi": true
+  }
+}

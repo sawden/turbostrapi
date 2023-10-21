@@ -1,0 +1,32 @@
+{
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": [
+    { "pattern": "apps/*/" },
+    { "pattern": "packages/*/" },
+    { "pattern": "configs/*/" }
+  ],
+  "editor.guides.bracketPairs": "active",
+  "cSpell.words": [
+    "clsx",
+    "nextjs",
+    "preinstall",
+    "strapi",
+    "tailwindcss",
+    "Turborepo",
+    "turbostrapi",
+    "typecheck",
+    "vercel"
+  ],
+  "css.lint.unknownAtRules": "ignore",
+  // enable cva autocompletion
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "css.lint.validProperties": ["composes"],
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  }
+}

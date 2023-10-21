@@ -1,0 +1,33 @@
+{
+  "name": "turbostrapi",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "configs/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo clean && git clean -xdf node_modules",
+    "clean:git": "git clean -xdf",
+    "dev": "turbo run dev",
+    "format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache'",
+    "format:fix": "yarn format -- --write",
+    "preinstall": "npx only-allow yarn",
+    "lint": "turbo run lint"
+  },
+  "prettier": "@turbostrapi/prettier-config",
+  "devDependencies": {
+    "@turbostrapi/prettier-config": "*",
+    "@turbostrapi/tsconfig": "*",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
+    "turbo": "^1.10.14"
+  },
+  "packageManager": "yarn@1.22.19",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0",
+    "yarn": ">=1.22.19"
+  }
+}

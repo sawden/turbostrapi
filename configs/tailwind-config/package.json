@@ -1,0 +1,32 @@
+{
+  "name": "@turbostrapi/tailwind-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared Tailwind CSS configuration.",
+  "main": "tailwind.config.ts",
+  "files": [
+    "tailwind.config.ts",
+    "postcss.config.ts",
+    "globals.css"
+  ],
+  "scripts": {
+    "clean": "git clean -xdf .turbo node_modules",
+    "format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@turbostrapi/prettier-config",
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "8.4.31",
+    "tailwindcss": "3.3.3"
+  },
+  "devDependencies": {
+    "@turbostrapi/eslint-config": "*",
+    "@turbostrapi/prettier-config": "*",
+    "@turbostrapi/tsconfig": "*",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  }
+}

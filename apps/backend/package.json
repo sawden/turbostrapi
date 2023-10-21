@@ -1,0 +1,35 @@
+{
+  "name": "@turbostrapi/backend",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Strapi CMS backend.",
+  "scripts": {
+    "build": "strapi build",
+    "clean": "git clean -xdf .turbo .cache node_modules",
+    "dev": "strapi develop",
+    "format": "prettier --check \"**/*.{js,cjs,mjs,ts,md,json}\"",
+    "lint": "eslint .",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "prettier": "@turbostrapi/prettier-config",
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.14.5",
+    "@strapi/plugin-users-permissions": "4.14.5",
+    "@strapi/strapi": "4.14.5",
+    "better-sqlite3": "9.0.0"
+  },
+  "devDependencies": {
+    "@turbostrapi/eslint-config": "*",
+    "@turbostrapi/prettier-config": "*",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "333e52c6-b635-4efa-aa4f-620f8437a83a"
+  }
+}

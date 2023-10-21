@@ -1,0 +1,46 @@
+.heroGlow {
+  --glow-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--glow-0deg) 0deg,
+    var(--glow-180deg) 180deg,
+    var(--glow-360deg) 360deg
+  );
+  transition:
+    --glow-0deg 1s,
+    --glow-180deg 1s,
+    --glow-360deg 1s;
+  background-image: var(--glow-conic);
+}
+
+/* Default Variant (turborepo) */
+@property --glow-0deg {
+  syntax: "<color>";
+  initial-value: #2a8af6;
+  inherits: false;
+}
+
+@property --glow-180deg {
+  syntax: "<color>";
+  initial-value: #a853ba;
+  inherits: false;
+}
+
+@property --glow-360deg {
+  syntax: "<color>";
+  initial-value: #e92a67;
+  inherits: false;
+}
+
+.heroGlow--turborepo {
+  /* @property fallback */
+  --glow-0deg: #2a8af6;
+  --glow-180deg: #a853ba;
+  --glow-360deg: #e92a67;
+}
+
+/* Additional Variants */
+.heroGlow--strapi {
+  --glow-0deg: #8584d4;
+  --glow-180deg: #6462e3;
+  --glow-360deg: #4945ff;
+}

@@ -1,0 +1,57 @@
+"use client";
+import { Button } from "@turbostrapi/ui";
+import { useTheme } from "next-themes";
+import * as React from "react";
+import { useEffect, useState } from "react";
+
+export type ThemeSwitcherProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+const ThemeSwitcher = React.forwardRef<HTMLButtonElement, ThemeSwitcherProps>(
+  ({ ...props }, ref) => {
+    const [mounted, setMounted] = useState(false);
+    const { theme, setTheme } = useTheme();
+
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
+    return (
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        ref={ref}
+        {...props}
+      >
+        {theme === "dark" ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="h-5 w-5"
+          >
+            <path d="M11.983 1.907a.75.75 0 00-1.292-.657l-8.5 9.5A.75.75 0 002.75 12h6.572l-1.305 6.093a.75.75 0 001.292.657l8.5-9.5A.75.75 0 0017.25 8h-6.572l1.305-6.093z" />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="h-5 w-5"
+          >
+            <path
+              fillRule="evenodd"
+              d="M2.22 2.22a.75.75 0 011.06 0l14.5 14.5a.75.75 0 11-1.06 1.06L2.22 3.28a.75.75 0 010-1.06z"
+              clipRule="evenodd"
+            />
+            <path d="M4.73 7.912L2.191 10.75A.75.75 0 002.75 12h6.068L4.73 7.912zM9.233 12.415l-1.216 5.678a.75.75 0 001.292.657l2.956-3.303-3.032-3.032zM15.27 12.088l2.539-2.838A.75.75 0 0017.25 8h-6.068l4.088 4.088zM10.767 7.585l1.216-5.678a.75.75 0 00-1.292-.657L7.735 4.553l3.032 3.032z" />
+          </svg>
+        )}
+      </Button>
+    );
+  },
+);
+ThemeSwitcher.displayName = "ThemeSwitcher";
+
+export { ThemeSwitcher };

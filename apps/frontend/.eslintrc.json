@@ -1,0 +1,8 @@
+{
+  "root": true,
+  "extends": [
+    "@turbostrapi/eslint-config/base",
+    "@turbostrapi/eslint-config/nextjs",
+    "@turbostrapi/eslint-config/react"
+  ]
+}

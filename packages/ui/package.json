@@ -1,0 +1,28 @@
+{
+  "name": "@turbostrapi/ui",
+  "version": "0.0.0",
+  "private": true,
+  "description": "React UI component library.",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "scripts": {
+    "clean": "git clean -xdf .turbo node_modules",
+    "format": "prettier --check \"**/*.{js,cjs,mjs,ts,tsx,md,json}\"",
+    "generate:component": "turbo gen react-component",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@turbo/gen": "^1.10.14",
+    "@turbostrapi/cva": "*",
+    "@turbostrapi/eslint-config": "*",
+    "@turbostrapi/tailwind-config": "*",
+    "@turbostrapi/tsconfig": "*",
+    "@types/node": "^18.18.1",
+    "@types/react": "^18.2.24",
+    "@types/react-dom": "^18.2.8",
+    "postcss": "^8.4.31",
+    "react": "^18.2.0",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
+  }
+}

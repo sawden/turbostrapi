@@ -4,23 +4,28 @@ import { useTheme } from "next-themes";
 import * as React from "react";
 import { useEffect, useState } from "react";
 
-export type ThemeSwitcherProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+export type ThemeSwitchProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const ThemeSwitcher = React.forwardRef<HTMLButtonElement, ThemeSwitcherProps>(
+const ThemeSwitch = React.forwardRef<HTMLButtonElement, ThemeSwitchProps>(
   ({ ...props }, ref) => {
     const [mounted, setMounted] = useState(false);
     const { theme, setTheme } = useTheme();
+    const oppositeTheme = theme === "dark" ? "light" : "dark";
 
     useEffect(() => {
       setMounted(true);
     }, []);
 
-    if (!mounted) return null;
+    if (!mounted) {
+      return null;
+    }
+
     return (
       <Button
         variant="ghost"
         size="icon"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        aria-label={`Switch to ${oppositeTheme} mode`}
+        onClick={() => setTheme(oppositeTheme)}
         ref={ref}
         {...props}
       >
@@ -52,6 +57,6 @@ const ThemeSwitcher = React.forwardRef<HTMLButtonElement, ThemeSwitcherProps>(
     );
   },
 );
-ThemeSwitcher.displayName = "ThemeSwitcher";
+ThemeSwitch.displayName = "ThemeSwitch";
 
-export { ThemeSwitcher };
+export { ThemeSwitch };

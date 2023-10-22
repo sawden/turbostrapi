@@ -1,2 +1,2 @@
 export * from "./hero";
-export * from "./theme-switcher";
+export * from "./theme-switch";

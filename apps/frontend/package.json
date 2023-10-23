@@ -11,7 +11,7 @@
     "lint": "next lint",
     "start": "next start"
   },
-  "prettier": "@turbostrapi/prettier-config",
+  "prettier": "@turbostrapi/prettier-config/tailwindcss.mjs",
   "dependencies": {
     "@turbostrapi/cva": "*",
     "@turbostrapi/ui": "*",

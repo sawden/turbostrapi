@@ -3,12 +3,11 @@
 
 /** @type { PrettierConfig | TailwindConfig } */
 
+import baseConfig from "./base.cjs";
+
 const config = {
-  plugins: [
-    "prettier-plugin-packagejson",
-    "prettier-plugin-organize-imports",
-    "prettier-plugin-tailwindcss",
-  ],
+  ...baseConfig,
+  plugins: [...baseConfig.plugins, "prettier-plugin-tailwindcss"],
   tailwindFunctions: ["cva", "cx"],
 };
 

@@ -11,10 +11,12 @@
     "generate:component": "turbo gen react-component",
     "lint": "eslint ."
   },
+  "prettier": "@turbostrapi/prettier-config/tailwindcss.mjs",
   "devDependencies": {
     "@turbo/gen": "^1.10.14",
     "@turbostrapi/cva": "*",
     "@turbostrapi/eslint-config": "*",
+    "@turbostrapi/prettier-config": "*",
     "@turbostrapi/tailwind-config": "*",
     "@turbostrapi/tsconfig": "*",
     "@types/node": "^18.18.1",

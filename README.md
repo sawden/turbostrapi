@@ -9,7 +9,7 @@ TurboStrapi is not just another starter. It's your gateway to seamless web devel
 ## 📦 Stack
 
 - **[Strapi](https://strapi.io/)**: Handle your content like never before.
-- **[Next.js](https://nextjs.org/)**: For a blazing fast frontend experience.
+- **[Next.js 14](https://nextjs.org/)**: For a blazing fast frontend experience.
 - **[Turborepo](https://turbo.build/repo)**: Efficient monorepo management to keep things tidy.
 - **[Tailwind CSS](https://tailwindcss.com/)**: Awesome utility-first CSS framework.
 
@@ -18,7 +18,7 @@ TurboStrapi is not just another starter. It's your gateway to seamless web devel
 Discover the pre-configured goodies TurboStrapi brings to your table:
 
 - 🚧 🌐 **Strapi**: Fully typed with a demo.
-- 🚧 🔥 **Next.js**: Already connected to Strapi via an API service.
+- 🚧 🔥 **Next.js 14**: Already connected to Strapi via an API service.
 - 💼 **Turborepo**: Pre-configured, ready to go.
 - 🎨 **Tailwind CSS**: Shared configuration ensuring consistent styles.
 - 🎡 **CVA & tailwind-merge**: Tailwind variants made easy.

@@ -3,21 +3,21 @@
   "version": "0.0.0",
   "private": true,
   "description": "Utility for easy Tailwind CSS variants.",
+  "license": "MIT",
   "main": "./cva.config.ts",
   "types": "./cva.config.ts",
-  "license": "MIT",
   "scripts": {
     "clean": "git clean -xdf .turbo node_modules",
     "lint": "eslint ."
   },
-  "devDependencies": {
-    "@types/node": "^18.18.1",
-    "@turbostrapi/eslint-config": "*",
-    "@turbostrapi/tsconfig": "*",
-    "typescript": "^5.2.2"
-  },
   "dependencies": {
     "cva": "^1.0.0-beta.1",
-    "tailwind-merge": "^1.14.0"
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "@turbostrapi/eslint-config": "*",
+    "@turbostrapi/tsconfig": "*",
+    "@types/node": "^18.18.1",
+    "typescript": "^5.2.2"
   }
 }

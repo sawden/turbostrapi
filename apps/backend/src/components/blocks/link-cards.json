@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_link_cards",
+  "info": {
+    "displayName": "linkCards",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "displayName": "linkCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link-card"
+    }
+  }
+}

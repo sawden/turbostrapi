@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "Seo",
+    "icon": "search",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "required": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": true
+    },
+    "shareImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "metaSocial": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.meta-social"
+    }
+  }
+}

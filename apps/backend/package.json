@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "description": "Strapi CMS backend.",
+  "types": "./types",
   "scripts": {
     "build": "strapi build",
     "clean": "git clean -xdf .turbo .cache node_modules",

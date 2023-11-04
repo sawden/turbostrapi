@@ -17,10 +17,12 @@
     "@turbostrapi/ui": "*",
     "next": "^14.0.0",
     "next-themes": "^0.2.1",
+    "qs": "^6.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@turbostrapi/backend": "*",
     "@turbostrapi/eslint-config": "*",
     "@turbostrapi/prettier-config": "*",
     "@turbostrapi/tailwind-config": "*",

@@ -52,6 +52,13 @@ Discover the pre-configured goodies TurboStrapi brings to your table:
 
    Visit frontend [http://localhost:3000](http://localhost:3000) and backend [http://localhost:1337](http://localhost:1337).
 
+5. **Read the Docs**
+
+   Each workspace has its own `README.md` — Take a look before you start:
+
+   - [Backend](apps/backend/README.md)
+   - [Frontend](apps/frontend/README.md)
+
 ## 🗂️ Project Structure
 
 ```

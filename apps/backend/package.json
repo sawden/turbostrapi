@@ -18,7 +18,8 @@
     "@strapi/plugin-i18n": "4.15.0",
     "@strapi/plugin-users-permissions": "4.15.0",
     "@strapi/strapi": "4.15.0",
-    "better-sqlite3": "9.0.0"
+    "better-sqlite3": "9.0.0",
+    "pg": "^8.11.3"
   },
   "devDependencies": {
     "@turbostrapi/eslint-config": "*",

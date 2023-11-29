@@ -5,9 +5,21 @@ export interface BlocksLinkCards extends Schema.Component {
   info: {
     displayName: "linkCards";
     icon: "link";
+    description: "";
   };
   attributes: {
     cards: Attribute.Component<"shared.link-card", true>;
+  };
+}
+
+export interface BlocksRichText extends Schema.Component {
+  collectionName: "components_blocks_rich_texts";
+  info: {
+    displayName: "Rich text";
+    icon: "pencil";
+  };
+  attributes: {
+    content: Attribute.Blocks & Attribute.Required;
   };
 }
 
@@ -68,6 +80,7 @@ declare module "@strapi/types" {
   export module Shared {
     export interface Components {
       "blocks.link-cards": BlocksLinkCards;
+      "blocks.rich-text": BlocksRichText;
       "shared.link-card": SharedLinkCard;
       "shared.meta-social": SharedMetaSocial;
       "shared.seo": SharedSeo;

@@ -13,6 +13,7 @@
   },
   "prettier": "@turbostrapi/prettier-config/tailwindcss.mjs",
   "dependencies": {
+    "@strapi/blocks-react-renderer": "^1.0.0-beta.0",
     "@turbostrapi/cva": "*",
     "@turbostrapi/ui": "*",
     "next": "^14.0.0",
@@ -22,7 +23,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@turbostrapi/backend": "*",
+        "@turbostrapi/backend": "*",
     "@turbostrapi/eslint-config": "*",
     "@turbostrapi/prettier-config": "*",
     "@turbostrapi/tailwind-config": "*",

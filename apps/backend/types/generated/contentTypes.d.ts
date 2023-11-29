@@ -391,7 +391,7 @@ export interface ApiPagePage extends Schema.CollectionType {
           localized: false;
         };
       }>;
-    blocks: Attribute.DynamicZone<["blocks.link-cards"]> &
+    blocks: Attribute.DynamicZone<["blocks.link-cards", "blocks.rich-text"]> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

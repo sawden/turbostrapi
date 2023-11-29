@@ -1,3 +1,6 @@
+"use client";
+
+import { useRotatingValue } from "@/hooks";
 import { cva, cx } from "@turbostrapi/cva";
 import Image from "next/image";
 import * as React from "react";
@@ -14,12 +17,14 @@ const gradientVariants = cva({
   },
 });
 
-export interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant: string;
-}
+const Hero = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  const variants = ["strapi", "turborepo"];
+  const rotatingVariant = useRotatingValue(variants, 4500);
 
-const Hero = React.forwardRef<HTMLDivElement, HeroProps>(
-  ({ className, variant, ...props }, ref) => (
+  return (
     <div
       className={cx(
         "relative z-0 flex flex-col items-center justify-between gap-8 pb-16 pt-12 md:pb-24 md:pt-16 lg:pb-32 lg:pt-20",
@@ -45,7 +50,7 @@ const Hero = React.forwardRef<HTMLDivElement, HeroProps>(
                 size: "logo",
               }),
               styles.heroGlow,
-              styles[`heroGlow--${variant}`],
+              styles[`heroGlow--${rotatingVariant}`],
             )}
           />
         </div>
@@ -53,7 +58,7 @@ const Hero = React.forwardRef<HTMLDivElement, HeroProps>(
         <div className="relative z-50 h-[120px] w-[120px]">
           <div
             className={`absolute inset-0 flex justify-center transition-opacity duration-1000 ${
-              variant === "turborepo"
+              rotatingVariant === "turborepo"
                 ? "visible opacity-100"
                 : "invisible opacity-0"
             }`}
@@ -68,7 +73,7 @@ const Hero = React.forwardRef<HTMLDivElement, HeroProps>(
           </div>
           <div
             className={`absolute inset-0 flex justify-center transition-opacity duration-1000 ${
-              variant === "strapi"
+              rotatingVariant === "strapi"
                 ? "visible opacity-100"
                 : "invisible opacity-0"
             }`}
@@ -99,12 +104,13 @@ const Hero = React.forwardRef<HTMLDivElement, HeroProps>(
             size: "background",
           }),
           styles.heroGlow,
-          styles[`heroGlow--${variant}`],
+          styles[`heroGlow--${rotatingVariant}`],
         )}
       />
     </div>
-  ),
-);
+  );
+});
+
 Hero.displayName = "Hero";
 
 export { Hero };

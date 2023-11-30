@@ -17,10 +17,9 @@ const RichText = React.forwardRef<HTMLDivElement, RichTextProps>(
       // TODO: Remove 'as RootNode[]' after Strapi provides more specific types.
       const content = section.content as RootNode[];
       return (
-        <div
-          className="prose dark:prose-invert text-center md:text-left lg:w-full lg:max-w-5xl"
-        >
-        <BlocksRenderer content={content} {...ref} />        </div>
+        <div className="prose text-center dark:prose-invert md:text-left lg:w-full lg:max-w-5xl">
+          <BlocksRenderer content={content} {...ref} />{" "}
+        </div>
       );
     }
   },

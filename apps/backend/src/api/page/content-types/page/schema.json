@@ -40,10 +40,7 @@
         }
       },
       "type": "dynamiczone",
-      "components": [
-        "blocks.link-cards",
-        "blocks.rich-text"
-      ]
+      "components": ["blocks.link-cards", "blocks.rich-text"]
     },
     "seo": {
       "displayName": "Seo",

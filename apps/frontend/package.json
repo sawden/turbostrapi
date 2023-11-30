@@ -23,11 +23,12 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-        "@turbostrapi/backend": "*",
+    "@turbostrapi/backend": "*",
     "@turbostrapi/eslint-config": "*",
     "@turbostrapi/prettier-config": "*",
     "@turbostrapi/tailwind-config": "*",
     "@types/node": "^18.18.1",
+    "@types/qs": "^6.9.10",
     "@types/react": "^18.2.24",
     "@types/react-dom": "^18.2.8",
     "autoprefixer": "^10.4.16",
@@ -35,6 +36,6 @@
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "tailwindcss": "^3.3.5",
-    "typescript": "5.2.2"
+    "typescript": "5.3.2"
   }
 }

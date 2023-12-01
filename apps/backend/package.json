@@ -5,13 +5,14 @@
   "description": "Strapi CMS backend.",
   "types": "./types",
   "scripts": {
-    "build": "strapi build",
+    "build": "yarn with-env strapi build",
     "clean": "git clean -xdf .turbo .cache node_modules",
-    "dev": "strapi develop",
+    "dev": "yarn with-env strapi develop",
     "format": "prettier --check \"**/*.{js,cjs,mjs,ts,md,json}\"",
     "lint": "eslint .",
-    "start": "strapi start",
-    "strapi": "strapi"
+    "start": "yarn with-env strapi start",
+    "strapi": "strapi",
+    "with-env": "dotenv -e ../../.env --"
   },
   "prettier": "@turbostrapi/prettier-config",
   "dependencies": {
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@turbostrapi/eslint-config": "*",
     "@turbostrapi/prettier-config": "*",
+    "dotenv-cli": "^7.3.0",
     "eslint": "^8.50.0",
     "prettier": "^3.0.3"
   },

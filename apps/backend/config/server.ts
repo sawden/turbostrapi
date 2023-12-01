@@ -1,12 +1,12 @@
 import type { EnvFunction } from "../types/shared/env";
 
 export default ({ env }: { env: EnvFunction }) => ({
-  host: env("HOST", "0.0.0.0"),
-  port: env.int("PORT", 1337),
+  host: env("BACKEND_HOST", "0.0.0.0"),
+  port: env.int("BACKEND_PORT", 1337),
   app: {
-    keys: env.array("APP_KEYS"),
+    keys: env.array("BACKEND_APP_KEYS"),
   },
   webhooks: {
-    populateRelations: env.bool("WEBHOOKS_POPULATE_RELATIONS", false),
+    populateRelations: env.bool("BACKEND_WEBHOOKS_POPULATE_RELATIONS", false),
   },
 });

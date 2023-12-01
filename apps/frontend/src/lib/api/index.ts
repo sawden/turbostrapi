@@ -35,8 +35,7 @@ export function getStrapiApiPathByUId(uid: APIEndpointUID): string {
  * @returns Full Strapi URL
  */
 export function getStrapiURL(path = ""): string {
-  const apiUrl =
-    process.env.NEXT_PUBLIC_STRAPI_API_URL ?? "http://localhost:1337";
+  const apiUrl = process.env.FRONTEND_BACKEND_URL ?? "http://localhost:1337";
   return `${apiUrl}${path}`;
 }
 
@@ -53,7 +52,7 @@ export async function fetchAPI<TResult>(
   options = {},
 ): Promise<TResult> {
   try {
-    const token = process.env.STRAPI_API_SECRET;
+    const token = process.env.FRONTEND_BACKEND_API_SECRET;
 
     // Merge default and user options
     const mergedOptions = {

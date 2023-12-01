@@ -1,4 +1,4 @@
-> :construction: **WIP**: A ready to use TurboStrapi is around the corner!
+> :partying_face: TurboStrapi is now ready to use!
 
 # TurboStrapi: The Strapi & Next.js Monorepo Starter
 
@@ -17,13 +17,14 @@ TurboStrapi is not just another starter. It's your gateway to seamless web devel
 
 Discover the pre-configured goodies TurboStrapi brings to your table:
 
-- 🚧 🌐 **Strapi**: Fully typed with a demo.
+- 🌐 **Strapi**: Fully typed with a demo.
 - 🔥 **Next.js 14**: Already connected to Strapi via an API service.
 - 💼 **Turborepo**: Pre-configured, ready to go.
 - 🎨 **Tailwind CSS**: Shared configuration ensuring consistent styles.
 - 🎡 **CVA & tailwind-merge**: Tailwind variants made easy.
 - 🛠️ **Code Quality**: Out-of-the-box ESLint, Prettier, and TypeScript.
-- 🚧 ⚙️ **.env**: Centralized `.env` file, validated using [Zod](https://zod.dev/).
+- ⚙️ **.env**: Centralized local `.env` file.
+- 🚧📦 **Sample DB Seed**: Import demo data for quick setup.
   > 🚧 WIP: Stay tuned!
 
 ## 🚀 Get Up and Running
@@ -34,13 +35,23 @@ Discover the pre-configured goodies TurboStrapi brings to your table:
    git clone https://github.com/sawden/turbostrapi.git
    ```
 
-2. **Set Things Up**
+2. **Setup Environment**
+
+   Copy the example .env and adjust the variables:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   > The `.env` file at the root handles environment variables across all workspaces.
+
+3. **Set Things Up**
 
    ```bash
    yarn
    ```
 
-3. **Launch**
+4. **Launch**
 
    Light up both Strapi and Next.js:
 
@@ -48,11 +59,11 @@ Discover the pre-configured goodies TurboStrapi brings to your table:
    yarn dev
    ```
 
-4. **Witness Magic**
+5. **Witness Magic**
 
    Visit frontend [http://localhost:3000](http://localhost:3000) and backend [http://localhost:1337](http://localhost:1337).
 
-5. **Read the Docs**
+6. **Read the Docs**
 
    Each workspace has its own `README.md` — Take a look before you start:
 

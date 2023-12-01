@@ -4,12 +4,13 @@
   "private": true,
   "description": "Next.js-based frontend.",
   "scripts": {
-    "build": "next build",
+    "build": "yarn with-env next build",
     "clean": "git clean -xdf .next .turbo node_modules",
-    "dev": "next dev",
+    "dev": "yarn with-env next dev",
     "format": "prettier --check \"**/*.{js,cjs,mjs,ts,tsx,md,json}\"",
     "lint": "next lint",
-    "start": "next start"
+    "start": "yarn with-env next start",
+    "with-env": "dotenv -e ../../.env --"
   },
   "prettier": "@turbostrapi/prettier-config/tailwindcss.mjs",
   "dependencies": {
@@ -32,6 +33,7 @@
     "@types/react": "^18.2.24",
     "@types/react-dom": "^18.2.8",
     "autoprefixer": "^10.4.16",
+    "dotenv-cli": "^7.3.0",
     "eslint": "^8.52.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",

@@ -3,82 +3,82 @@ import path from "path";
 import type { EnvFunction } from "../types/shared/env";
 
 export default ({ env }: { env: EnvFunction }) => {
-  const client = env("DATABASE_CLIENT", "sqlite");
+  const client = env("BACKEND_DATABASE_CLIENT", "sqlite");
 
   const connections = {
     mysql: {
       connection: {
-        connectionString: env("DATABASE_URL"),
-        host: env("DATABASE_HOST", "localhost"),
-        port: env.int("DATABASE_PORT", 3306),
-        database: env("DATABASE_NAME", "strapi"),
-        user: env("DATABASE_USERNAME", "strapi"),
-        password: env("DATABASE_PASSWORD", "strapi"),
-        ssl: env.bool("DATABASE_SSL", false) && {
-          key: env("DATABASE_SSL_KEY", undefined),
-          cert: env("DATABASE_SSL_CERT", undefined),
-          ca: env("DATABASE_SSL_CA", undefined),
-          capath: env("DATABASE_SSL_CAPATH", undefined),
-          cipher: env("DATABASE_SSL_CIPHER", undefined),
+        connectionString: env("BACKEND_DATABASE_URL"),
+        host: env("BACKEND_DATABASE_HOST", "localhost"),
+        port: env.int("BACKEND_DATABASE_PORT", 3306),
+        database: env("BACKEND_DATABASE_NAME", "strapi"),
+        user: env("BACKEND_DATABASE_USERNAME", "strapi"),
+        password: env("BACKEND_DATABASE_PASSWORD", "strapi"),
+        ssl: env.bool("BACKEND_DATABASE_SSL", false) && {
+          key: env("BACKEND_DATABASE_SSL_KEY", undefined),
+          cert: env("BACKEND_DATABASE_SSL_CERT", undefined),
+          ca: env("BACKEND_DATABASE_SSL_CA", undefined),
+          capath: env("BACKEND_DATABASE_SSL_CAPATH", undefined),
+          cipher: env("BACKEND_DATABASE_SSL_CIPHER", undefined),
           rejectUnauthorized: env.bool(
-            "DATABASE_SSL_REJECT_UNAUTHORIZED",
+            "BACKEND_DATABASE_SSL_REJECT_UNAUTHORIZED",
             true,
           ),
         },
       },
       pool: {
-        min: env.int("DATABASE_POOL_MIN", 2),
-        max: env.int("DATABASE_POOL_MAX", 10),
+        min: env.int("BACKEND_DATABASE_POOL_MIN", 2),
+        max: env.int("BACKEND_DATABASE_POOL_MAX", 10),
       },
     },
     mysql2: {
       connection: {
-        host: env("DATABASE_HOST", "localhost"),
-        port: env.int("DATABASE_PORT", 3306),
-        database: env("DATABASE_NAME", "strapi"),
-        user: env("DATABASE_USERNAME", "strapi"),
-        password: env("DATABASE_PASSWORD", "strapi"),
-        ssl: env.bool("DATABASE_SSL", false) && {
-          key: env("DATABASE_SSL_KEY", undefined),
-          cert: env("DATABASE_SSL_CERT", undefined),
-          ca: env("DATABASE_SSL_CA", undefined),
-          capath: env("DATABASE_SSL_CAPATH", undefined),
-          cipher: env("DATABASE_SSL_CIPHER", undefined),
+        host: env("BACKEND_DATABASE_HOST", "localhost"),
+        port: env.int("BACKEND_DATABASE_PORT", 3306),
+        database: env("BACKEND_DATABASE_NAME", "strapi"),
+        user: env("BACKEND_DATABASE_USERNAME", "strapi"),
+        password: env("BACKEND_DATABASE_PASSWORD", "strapi"),
+        ssl: env.bool("BACKEND_DATABASE_SSL", false) && {
+          key: env("BACKEND_DATABASE_SSL_KEY", undefined),
+          cert: env("BACKEND_DATABASE_SSL_CERT", undefined),
+          ca: env("BACKEND_DATABASE_SSL_CA", undefined),
+          capath: env("BACKEND_DATABASE_SSL_CAPATH", undefined),
+          cipher: env("BACKEND_DATABASE_SSL_CIPHER", undefined),
           rejectUnauthorized: env.bool(
-            "DATABASE_SSL_REJECT_UNAUTHORIZED",
+            "BACKEND_DATABASE_SSL_REJECT_UNAUTHORIZED",
             true,
           ),
         },
       },
       pool: {
-        min: env.int("DATABASE_POOL_MIN", 2),
-        max: env.int("DATABASE_POOL_MAX", 10),
+        min: env.int("BACKEND_DATABASE_POOL_MIN", 2),
+        max: env.int("BACKEND_DATABASE_POOL_MAX", 10),
       },
     },
     postgres: {
       connection: {
-        connectionString: env("DATABASE_URL"),
-        host: env("DATABASE_HOST", "localhost"),
-        port: env.int("DATABASE_PORT", 5432),
-        database: env("DATABASE_NAME", "strapi"),
-        user: env("DATABASE_USERNAME", "strapi"),
-        password: env("DATABASE_PASSWORD", "strapi"),
-        ssl: env.bool("DATABASE_SSL", false) && {
-          key: env("DATABASE_SSL_KEY", undefined),
-          cert: env("DATABASE_SSL_CERT", undefined),
-          ca: env("DATABASE_SSL_CA", undefined),
-          capath: env("DATABASE_SSL_CAPATH", undefined),
-          cipher: env("DATABASE_SSL_CIPHER", undefined),
+        connectionString: env("BACKEND_DATABASE_URL"),
+        host: env("BACKEND_DATABASE_HOST", "localhost"),
+        port: env.int("BACKEND_DATABASE_PORT", 5432),
+        database: env("BACKEND_DATABASE_NAME", "strapi"),
+        user: env("BACKEND_DATABASE_USERNAME", "strapi"),
+        password: env("BACKEND_DATABASE_PASSWORD", "strapi"),
+        ssl: env.bool("BACKEND_DATABASE_SSL", false) && {
+          key: env("BACKEND_DATABASE_SSL_KEY", undefined),
+          cert: env("BACKEND_DATABASE_SSL_CERT", undefined),
+          ca: env("BACKEND_DATABASE_SSL_CA", undefined),
+          capath: env("BACKEND_DATABASE_SSL_CAPATH", undefined),
+          cipher: env("BACKEND_DATABASE_SSL_CIPHER", undefined),
           rejectUnauthorized: env.bool(
-            "DATABASE_SSL_REJECT_UNAUTHORIZED",
+            "BACKEND_DATABASE_SSL_REJECT_UNAUTHORIZED",
             true,
           ),
         },
-        schema: env("DATABASE_SCHEMA", "public"),
+        schema: env("BACKEND_DATABASE_SCHEMA", "public"),
       },
       pool: {
-        min: env.int("DATABASE_POOL_MIN", 2),
-        max: env.int("DATABASE_POOL_MAX", 10),
+        min: env.int("BACKEND_DATABASE_POOL_MIN", 2),
+        max: env.int("BACKEND_DATABASE_POOL_MAX", 10),
       },
     },
     sqlite: {
@@ -87,7 +87,7 @@ export default ({ env }: { env: EnvFunction }) => {
           __dirname,
           "..",
           "..",
-          env("DATABASE_FILENAME", ".tmp/data.db"),
+          env("BACKEND_DATABASE_FILENAME", ".tmp/data.db"),
         ),
       },
       useNullAsDefault: true,
@@ -98,7 +98,10 @@ export default ({ env }: { env: EnvFunction }) => {
     connection: {
       client,
       ...connections[client],
-      acquireConnectionTimeout: env.int("DATABASE_CONNECTION_TIMEOUT", 60000),
+      acquireConnectionTimeout: env.int(
+        "BACKEND_DATABASE_CONNECTION_TIMEOUT",
+        60000,
+      ),
     },
   };
 };

@@ -1,6 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
+  "globalDependencies": ["**/.env"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
@@ -18,5 +18,35 @@
       "outputs": ["node_modules/.cache/.prettiercache"],
       "outputMode": "new-only"
     }
-  }
+  },
+  "globalEnv": [
+    "FRONTEND_BACKEND_API_SECRET",
+    "FRONTEND_BACKEND_URL",
+    "BACKEND_ADMIN_JWT_SECRET",
+    "BACKEND_API_TOKEN_SALT",
+    "BACKEND_TRANSFER_TOKEN_SALT",
+    "BACKEND_HOST",
+    "BACKEND_PORT",
+    "BACKEND_APP_KEYS",
+    "BACKEND_WEBHOOKS_POPULATE_RELATIONS",
+    "BACKEND_DATABASE_CLIENT",
+    "BACKEND_DATABASE_URL",
+    "BACKEND_DATABASE_HOST",
+    "BACKEND_DATABASE_PORT",
+    "BACKEND_DATABASE_NAME",
+    "BACKEND_DATABASE_USERNAME",
+    "BACKEND_DATABASE_PASSWORD",
+    "BACKEND_DATABASE_SSL",
+    "BACKEND_DATABASE_SSL_KEY",
+    "BACKEND_DATABASE_SSL_CERT",
+    "BACKEND_DATABASE_SSL_CA",
+    "BACKEND_DATABASE_SSL_CAPATH",
+    "BACKEND_DATABASE_SSL_CIPHER",
+    "BACKEND_DATABASE_SSL_REJECT_UNAUTHORIZED",
+    "BACKEND_DATABASE_POOL_MIN",
+    "BACKEND_DATABASE_POOL_MAX",
+    "BACKEND_DATABASE_SCHEMA",
+    "BACKEND_DATABASE_FILENAME",
+    "BACKEND_DATABASE_CONNECTION_TIMEOUT"
+  ]
 }

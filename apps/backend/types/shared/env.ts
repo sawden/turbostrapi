@@ -1,5 +1,6 @@
 interface EnvKeyMappings {
   BACKEND_ADMIN_JWT_SECRET: string;
+  BACKEND_JWT_SECRET: string;
   BACKEND_API_TOKEN_SALT: string;
   BACKEND_TRANSFER_TOKEN_SALT: string;
   BACKEND_HOST: string;

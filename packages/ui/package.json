@@ -13,18 +13,18 @@
   },
   "prettier": "@turbostrapi/prettier-config/tailwindcss.mjs",
   "devDependencies": {
-    "@turbo/gen": "^1.10.14",
+    "@turbo/gen": "^1.11.1",
     "@turbostrapi/cva": "*",
     "@turbostrapi/eslint-config": "*",
     "@turbostrapi/prettier-config": "*",
     "@turbostrapi/tailwind-config": "*",
     "@turbostrapi/tsconfig": "*",
     "@types/node": "^18.18.1",
-    "@types/react": "^18.2.24",
+    "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.8",
-    "postcss": "^8.4.31",
+    "postcss": "^8.4.32",
     "react": "^18.2.0",
-    "tailwindcss": "^3.3.5",
-    "typescript": "^5.2.2"
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3"
   }
 }

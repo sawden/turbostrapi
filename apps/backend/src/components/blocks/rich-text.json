@@ -1,8 +1,9 @@
 {
   "collectionName": "components_blocks_rich_texts",
   "info": {
-    "displayName": "Rich text",
-    "icon": "pencil"
+    "displayName": "RichText",
+    "icon": "pencil",
+    "description": ""
   },
   "options": {},
   "attributes": {

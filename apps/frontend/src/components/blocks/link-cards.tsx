@@ -20,7 +20,7 @@ const LinkCards = React.forwardRef<HTMLDivElement, LinkCardsProps>(
       {...props}
     >
       {data.cards?.map((card) => (
-        <Card href={card.url} key={card.id} title={card.title}>
+        <Card href={card.url} key={card.id} title={card.title} target={card.target}>
           {card.description}
         </Card>
       ))}

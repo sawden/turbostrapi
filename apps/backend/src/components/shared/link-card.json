@@ -17,6 +17,12 @@
     "url": {
       "type": "string",
       "required": true
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": ["_self", "_blank", "_parent", "_top"],
+      "default": "_self",
+      "required": true
     }
   }
 }

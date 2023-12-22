@@ -15,8 +15,9 @@ export interface BlocksLinkCards extends Schema.Component {
 export interface BlocksRichText extends Schema.Component {
   collectionName: "components_blocks_rich_texts";
   info: {
-    displayName: "Rich text";
+    displayName: "RichText";
     icon: "pencil";
+    description: "";
   };
   attributes: {
     content: Attribute.Blocks & Attribute.Required;
@@ -34,6 +35,9 @@ export interface SharedLinkCard extends Schema.Component {
     title: Attribute.String & Attribute.Required;
     description: Attribute.Text;
     url: Attribute.String & Attribute.Required;
+    target: Attribute.Enumeration<["_self", "_blank", "_parent", "_top"]> &
+      Attribute.Required &
+      Attribute.DefaultTo<"_self">;
   };
 }
 

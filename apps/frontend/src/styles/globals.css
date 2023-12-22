@@ -1,1 +1,13 @@
 @import url("@turbostrapi/tailwind-config/globals");
+
+/* 
+ *Fix radix-ui/react-dropdown-menu scrollbar layout shift
+ *@see: https://github.com/radix-ui/primitives/issues/1925
+ */
+html {
+  scrollbar-gutter: stable;
+}
+
+body[style] {
+  margin: 0 auto !important;
+}

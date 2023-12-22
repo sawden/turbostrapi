@@ -12,6 +12,9 @@
     "lint": "eslint ."
   },
   "prettier": "@turbostrapi/prettier-config/tailwindcss.mjs",
+  "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^2.0.6"
+  },
   "devDependencies": {
     "@turbo/gen": "^1.11.1",
     "@turbostrapi/cva": "*",

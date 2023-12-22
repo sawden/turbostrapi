@@ -57,6 +57,7 @@ const ThemeSwitch = React.forwardRef<HTMLButtonElement, ThemeSwitchProps>(
     );
   },
 );
+
 ThemeSwitch.displayName = "ThemeSwitch";
 
 export { ThemeSwitch };

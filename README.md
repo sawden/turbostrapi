@@ -24,7 +24,7 @@ Discover the pre-configured goodies TurboStrapi brings to your table:
 - 🌐 **Localization**: Multi-language Content support pre-configured.
 - 🎡 **CVA & tailwind-merge**: Tailwind variants made easy.
 - 🛠️ **Code Quality**: Out-of-the-box ESLint, Prettier, and TypeScript.
-- 🚧📦 **Sample DB Seed**: Import demo data for a quick setup.
+- 📦 **Sample DB Seed**: Import demo data for a quick setup.
 - 🚧🧪 **100% Test Coverage**: All implemented features are fully tested.
 
   > 🚧 WIP: Stay tuned!
@@ -38,35 +38,62 @@ Discover the pre-configured goodies TurboStrapi brings to your table:
    ```
 
 2. **Setup Environment**
+   Copy and adjust the example .env for both apps:
 
-   Copy the example .env and adjust the variables:
+   - Backend:
 
-   ```bash
-   cp .env.example .env
-   ```
+     ```bash
+     cp apps/backend/.env.example apps/backend/.env
+     ```
 
-   > The `.env` file at the root handles environment variables across all workspaces.
+   - Frontend:
 
-3. **Set Things Up**
+     ```bash
+     cp apps/frontend/.env.example apps/frontend/.env
+     ```
+
+     > Ignore `FRONTEND_BACKEND_API_SECRET` for now
+
+3. **Install Dependencies**
 
    ```bash
    yarn
    ```
 
-4. **Launch**
+4. **Import Demo Data**
+   Seed demo data into the Strapi backend:
 
+   ```bash
+   yarn workspace @turbostrapi/backend strapi import -f ./seed-data.tar.gz
+   ```
+
+5. **Launch**
    Light up both Strapi and Next.js:
 
    ```bash
    yarn dev
    ```
 
-5. **Witness Magic**
+6. **Create API Token**
+   First, open [http://localhost:1337](http://localhost:1337/admin) to create your Admin user. Then, go to [Strapi API Tokens](http://localhost:1337/admin/settings/api-tokens/create) and generate a token with the following settings:
 
-   Visit frontend [http://localhost:3000](http://localhost:3000) and backend [http://localhost:1337](http://localhost:1337).
+   - **Name**: Public Read
+   - **Description**: Access to public content.
+   - **Token duration**: Unlimited
+   - **Token type**: Custom
 
-6. **Read the Docs**
+   | Type   | Permissions           |
+   | ------ | --------------------- |
+   | Global | ✅ find               |
+   | Page   | ✅ find \| ✅ findOne |
+   | I18n   | ✅ listLocales        |
 
+   > After saving, add the token to `FRONTEND_BACKEND_API_SECRET` in `apps/frontend/.env`
+
+7. **Witness Magic**
+   Visit frontend [http://localhost:3000](http://localhost:3000) and backend [http://localhost:1337](http://localhost:1337/admin).
+
+8. **Read the Docs**
    Each workspace has its own `README.md` — Take a look before you start:
 
    - [Backend](apps/backend/README.md)

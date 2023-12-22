@@ -26,6 +26,7 @@ Discover the pre-configured goodies TurboStrapi brings to your table:
 - 🛠️ **Code Quality**: Out-of-the-box ESLint, Prettier, and TypeScript.
 - 📦 **Sample DB Seed**: Import demo data for a quick setup.
 - 🚧🧪 **100% Test Coverage**: All implemented features are fully tested.
+- 🚧🔍 **SEO Optimized**: Pre-configured for peak search engine visibility.
 
   > 🚧 WIP: Stay tuned!
 

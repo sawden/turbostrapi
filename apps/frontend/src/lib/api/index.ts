@@ -1,6 +1,11 @@
 import type { Common, Params } from "@turbostrapi/backend";
 import qs from "qs";
-import type { APIResponse, APIResponseCollection, APIUrlParams } from "./types";
+import type {
+  APIResponse,
+  APIResponseCollection,
+  APIUrlParams,
+  ApiLocale,
+} from "./types";
 
 /**
  * IMPORTANT:
@@ -154,6 +159,16 @@ export async function fetchMany<
     params,
     options,
   );
+}
+
+/**
+ * Fetches all i18n locales
+ */
+export async function fetchLocales(
+  params?: APIUrlParams<"plugin::i18n.locale">,
+  options = {},
+): Promise<ApiLocale[]> {
+  return fetchAPI<ApiLocale[]>("/i18n/locales", params ?? {}, options);
 }
 
 /**

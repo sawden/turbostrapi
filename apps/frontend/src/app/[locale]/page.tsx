@@ -10,15 +10,14 @@ import { notFound } from "next/navigation";
 interface PageProps {
   params: {
     slug: string;
+    locale: string;
   };
 }
 
-const UTM_PARAMS =
-  "utm_source=turbostrapi-starter&utm_medium=basic&utm_campaign=turbostrapi-starter";
-
-async function getPageBySlug(slug: string) {
+async function getPageBySlug(slug: string, locale: string) {
   const pageParams: APIUrlParams<"api::page.page"> = {
     sort: { createdAt: "desc" },
+    locale,
     populate: {
       blocks: {
         populate: "*",
@@ -35,7 +34,8 @@ async function getPageBySlug(slug: string) {
 export default async function Page({
   params,
 }: PageProps): Promise<JSX.Element> {
-  const response = await getPageBySlug(params.slug);
+  const response = await getPageBySlug(params.slug, params.locale);
+  const { locale } = params;
 
   if (response.data === null) {
     notFound();
@@ -50,16 +50,16 @@ export default async function Page({
         >
           apps/frontend
         </Callout>
-        <div className="fixed bottom-0 left-0 flex h-36 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black md:static md:h-auto md:w-auto md:bg-none">
+        <div className="fixed bottom-0 left-0 flex h-36 w-full items-end justify-center bg-gradient-to-t from-white via-white md:static md:h-auto md:w-auto md:bg-none dark:from-black dark:via-black">
           <a
             className="pointer-events-none flex place-items-center gap-2 p-8 md:pointer-events-auto md:p-0"
-            href={`https://vercel.com?${UTM_PARAMS}`}
+            href={`https://vercel.com?utm_source=turbostrapi-starter&utm_medium=basic&utm_campaign=turbostrapi-starter`}
             target="_blank"
             rel="noopener noreferrer"
           >
             Inspired by{" "}
             <Image
-              src="/vercel.svg"
+              src="/assets/vercel.svg"
               alt="Vercel Logo"
               className="dark:invert"
               width={100}
@@ -71,11 +71,11 @@ export default async function Page({
       </div>
 
       <div className="flex place-items-center">
-        <Hero />
+        <Hero locale={locale} />
       </div>
 
       {response.data?.attributes.blocks?.map((block, index) =>
-        sectionRenderer(block, index),
+        sectionRenderer(block, index, locale),
       )}
     </>
   );

@@ -7,10 +7,11 @@ export function sectionRenderer(
     Attribute.DynamicZone<["blocks.link-cards", "blocks.rich-text"]>
   >[number],
   index: number,
+  locale: string,
 ) {
   switch (section.__component) {
     case "blocks.link-cards":
-      return <LinkCards key={index} data={section} />;
+      return <LinkCards key={index} data={section} locale={locale} />;
     case "blocks.rich-text":
       return <RichText key={index} section={section} />;
     default:

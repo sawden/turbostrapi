@@ -17,10 +17,11 @@ TurboStrapi is not just another starter. It's your gateway to seamless web devel
 
 Discover the pre-configured goodies TurboStrapi brings to your table:
 
-- 🌐 **Strapi**: Fully typed with a demo.
+- 🧩 **Strapi**: Fully typed with a demo.
 - 🔥 **Next.js 14**: Already connected to Strapi via an API service.
 - 💼 **Turborepo**: Pre-configured, ready to go.
 - 🎨 **Tailwind CSS**: Shared configuration ensuring consistent styles.
+- 🌐 **Localization**: Multi-language Content support pre-configured.
 - 🎡 **CVA & tailwind-merge**: Tailwind variants made easy.
 - 🛠️ **Code Quality**: Out-of-the-box ESLint, Prettier, and TypeScript.
 - ⚙️ **.env**: Centralized local `.env` file.

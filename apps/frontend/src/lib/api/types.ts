@@ -6,7 +6,7 @@
  * GitHub Issue: {@link https://github.com/strapi/documentation/issues/1905}
  */
 
-import type { Attribute, Common, Params } from "@turbostrapi/backend";
+import type { Attribute, Common, Entity, Params } from "@turbostrapi/backend";
 
 interface APIIdProperty {
   id: number;
@@ -40,9 +40,9 @@ export interface APIResponseCollection<
   meta: APIResponseCollectionMetadata;
 }
 
-export type APILocale = string;
+export type APILocaleCode = string;
 
-type WithLocale<T> = T & { locale?: APILocale };
+type WithLocale<T> = T & { locale?: APILocaleCode };
 
 export type APIUrlParams<TContentTypeUID extends Common.UID.ContentType> =
   WithLocale<
@@ -56,3 +56,12 @@ export type APIUrlParams<TContentTypeUID extends Common.UID.ContentType> =
       | "pagination"
     >
   >;
+
+export interface ApiLocale {
+  id: Entity.ID;
+  createdAt: string;
+  updatedAt: string;
+  code: string;
+  isDefault: boolean;
+  name: string;
+}

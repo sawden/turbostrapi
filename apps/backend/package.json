@@ -16,15 +16,15 @@
   },
   "prettier": "@turbostrapi/prettier-config",
   "dependencies": {
-    "@strapi/plugin-i18n": "4.15.5",
-    "@strapi/plugin-users-permissions": "4.15.5",
-    "@strapi/strapi": "4.15.5",
+    "@strapi/plugin-i18n": "4.16.2",
+    "@strapi/plugin-users-permissions": "4.16.2",
+    "@strapi/strapi": "4.16.2",
     "better-sqlite3": "9.2.2",
     "pg": "^8.11.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.20.1",
-    "styled-components": "^6.1.1"
+    "react-router-dom": "^5.3.4",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@turbostrapi/eslint-config": "*",

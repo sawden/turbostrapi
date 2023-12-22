@@ -774,9 +774,10 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     singularName: "global";
     pluralName: "globals";
     displayName: "Global";
+    description: "";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -792,7 +793,6 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
       }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       "api::global.global",
       "oneToOne",

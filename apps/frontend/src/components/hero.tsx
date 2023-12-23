@@ -64,10 +64,11 @@ const Hero = React.forwardRef<HTMLDivElement, HeroProps>(
             className="relative z-50 h-[120px] w-[120px]"
           >
             <div
-              className={`absolute inset-0 flex justify-center transition-opacity duration-1000 ${rotatingVariant === "turborepo"
-                ? "visible opacity-100"
-                : "invisible opacity-0"
-                }`}
+              className={`absolute inset-0 flex justify-center transition-opacity duration-1000 ${
+                rotatingVariant === "turborepo"
+                  ? "visible opacity-100"
+                  : "invisible opacity-0"
+              }`}
             >
               <Image
                 alt="Turborepo logo"
@@ -78,10 +79,11 @@ const Hero = React.forwardRef<HTMLDivElement, HeroProps>(
               />
             </div>
             <div
-              className={`absolute inset-0 flex justify-center transition-opacity duration-1000 ${rotatingVariant === "strapi"
-                ? "visible opacity-100"
-                : "invisible opacity-0"
-                }`}
+              className={`absolute inset-0 flex justify-center transition-opacity duration-1000 ${
+                rotatingVariant === "strapi"
+                  ? "visible opacity-100"
+                  : "invisible opacity-0"
+              }`}
             >
               <Image
                 alt="Strapi logo"

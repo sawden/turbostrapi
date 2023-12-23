@@ -4,7 +4,7 @@
 
 ![TurboStrapi](https://github-production-user-asset-6210df.s3.amazonaws.com/36924392/277128068-6fc3f7df-0e57-45be-bf3c-90b2c0f6e646.gif)
 
-TurboStrapi is not just another starter. It's your gateway to seamless web development, combining the powers of **Strapi**, **Next.js**, and **Turborepo** in a monorepo setup. Unleash your creativity and scale with ease!
+TurboStrapi is the go-to starter template for Strapi projects, crafted to kickstart your projects, combining the powers of **Strapi**, **Next.js**, and **Turborepo** in a monorepo setup. Unleash your creativity and scale with ease!
 
 ## 📦 Stack
 

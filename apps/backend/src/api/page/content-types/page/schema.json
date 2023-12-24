@@ -33,14 +33,17 @@
       "type": "string",
       "required": false
     },
-    "blocks": {
+    "sections": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "type": "dynamiczone",
-      "components": ["blocks.link-cards", "blocks.rich-text"]
+      "components": [
+        "sections.link-cards",
+        "sections.rich-text"
+      ]
     },
     "seo": {
       "displayName": "Seo",

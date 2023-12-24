@@ -843,7 +843,9 @@ export interface ApiPagePage extends Schema.CollectionType {
           localized: false;
         };
       }>;
-    blocks: Attribute.DynamicZone<["blocks.link-cards", "blocks.rich-text"]> &
+    sections: Attribute.DynamicZone<
+      ["sections.link-cards", "sections.rich-text"]
+    > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

@@ -1,7 +1,7 @@
 "use client";
 
+import { LocaleProvider } from "@/context/locale-context";
 import { ThemeProvider } from "next-themes";
-import { LocaleProvider } from "./locale-context";
 
 export function Providers({ children }) {
   return (

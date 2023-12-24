@@ -2,15 +2,13 @@ import type { ApiLocale } from "@/lib/api/types";
 import { usePathname, useRouter } from "next/navigation";
 import { createContext, useContext, useEffect, useState } from "react";
 
-interface LanguageContextProps {
+interface LocaleContextProps {
   locale: string | undefined;
   apiLocales: ApiLocale[];
   setLocale: (locale: string) => void;
 }
 
-const LanguageContext = createContext<LanguageContextProps | undefined>(
-  undefined,
-);
+const LocaleContext = createContext<LocaleContextProps | undefined>(undefined);
 
 export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -56,16 +54,14 @@ export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   return (
-    <LanguageContext.Provider value={value}>
-      {children}
-    </LanguageContext.Provider>
+    <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>
   );
 };
 
-export const useLanguage = (): LanguageContextProps => {
-  const context = useContext(LanguageContext);
+export const useLocale = (): LocaleContextProps => {
+  const context = useContext(LocaleContext);
   if (!context) {
-    throw new Error("useLanguage must be used within a LocaleProvider");
+    throw new Error("useLocale must be used within a LocaleProvider");
   }
   return context;
 };

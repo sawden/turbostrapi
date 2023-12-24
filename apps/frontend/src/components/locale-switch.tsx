@@ -10,7 +10,7 @@ import Link from "next/link";
 
 import { usePathname } from "next/navigation";
 
-import { useLanguage } from "@/app/locale-context";
+import { useLocale } from "@/context/locale-context";
 import {
   addLocaleToPath,
   getDefaultLocaleFormLocales,
@@ -23,7 +23,7 @@ export type LocaleSwitchProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const LocaleSwitch = React.forwardRef<HTMLButtonElement, LocaleSwitchProps>(
   ({ ...props }, ref) => {
-    const { apiLocales, locale } = useLanguage();
+    const { apiLocales, locale } = useLocale();
     const pathName = usePathname();
 
     const redirectedPathName = (toLocale: string) => {

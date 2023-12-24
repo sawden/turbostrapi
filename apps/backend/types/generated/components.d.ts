@@ -1,7 +1,7 @@
 import type { Attribute, Schema } from "@strapi/strapi";
 
-export interface BlocksLinkCards extends Schema.Component {
-  collectionName: "components_blocks_link_cards";
+export interface SectionsLinkCards extends Schema.Component {
+  collectionName: "components_sections_link_cards";
   info: {
     displayName: "linkCards";
     icon: "link";
@@ -12,8 +12,8 @@ export interface BlocksLinkCards extends Schema.Component {
   };
 }
 
-export interface BlocksRichText extends Schema.Component {
-  collectionName: "components_blocks_rich_texts";
+export interface SectionsRichText extends Schema.Component {
+  collectionName: "components_sections_rich_texts";
   info: {
     displayName: "RichText";
     icon: "pencil";
@@ -83,8 +83,8 @@ export interface SharedSeo extends Schema.Component {
 declare module "@strapi/types" {
   export module Shared {
     export interface Components {
-      "blocks.link-cards": BlocksLinkCards;
-      "blocks.rich-text": BlocksRichText;
+      "sections.link-cards": SectionsLinkCards;
+      "sections.rich-text": SectionsRichText;
       "shared.link-card": SharedLinkCard;
       "shared.meta-social": SharedMetaSocial;
       "shared.seo": SharedSeo;

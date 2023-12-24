@@ -177,7 +177,7 @@ export async function fetchLocales(
 // const pageParams: APIUrlParams<"api::page.page"> = {
 //   sort: { createdAt: "desc" },
 //   populate: {
-//     blocks: {
+//     sections: {
 //       populate: "*",
 //     },
 //     seo: {
@@ -189,8 +189,8 @@ export async function fetchLocales(
 // fetchOne("api::page.page", 1, pageParams)
 //   .then((res) => {
 //     console.log("fetchOne | res", res);
-//     res.data?.attributes.blocks?.map((block) => {
-//       console.log(block.id);
+//     res.data?.attributes.sections?.map((section) => {
+//       console.log(section.id);
 //     });
 //   })
 //   .catch((e) => {
@@ -212,8 +212,8 @@ export async function fetchLocales(
 // fetchOneBySlug("api::page.page", null, pageParams)
 // .then((res) => {
 //   console.log("fetchOneBySlug | res", res);
-//   res.data?.attributes.blocks?.map((block) => {
-//     console.log(block.id);
+//   res.data?.attributes.sections?.map((section) => {
+//     console.log(section.id);
 //   });
 // })
 // .catch((e) => {

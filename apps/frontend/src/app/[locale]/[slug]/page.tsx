@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-import { Hero } from "@/components";
-import { sectionRenderer } from "@/components/section-renderer";
 import { fetchOneBySlug } from "@/lib/api";
 import type { APIUrlParams } from "@/lib/api/types";
 import { Callout } from "@turbostrapi/ui";
 import { notFound } from "next/navigation";
+import { sectionRenderer } from "@/components/section-renderer";
+import { Hero } from "@/components/hero";
 
 interface PageProps {
   params: {
@@ -19,7 +19,7 @@ async function getPageBySlug(slug: string, locale: string) {
     sort: { createdAt: "desc" },
     locale,
     populate: {
-      blocks: {
+      sections: {
         populate: "*",
       },
       seo: {
@@ -73,8 +73,8 @@ export default async function Page({
         <Hero locale={locale} />
       </div>
 
-      {response.data?.attributes.blocks?.map((block, index) =>
-        sectionRenderer(block, index, locale),
+      {response.data?.attributes.sections?.map((section, index) =>
+        sectionRenderer(section, index, locale),
       )}
     </>
   );

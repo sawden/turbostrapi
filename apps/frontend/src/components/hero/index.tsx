@@ -1,6 +1,6 @@
 "use client";
 
-import { useRotatingValue } from "@/hooks";
+import { useRotatingValue } from "@/hooks/use-rotating-value";
 import { localizeHref } from "@/lib/localization";
 import { cva, cx } from "@turbostrapi/cva";
 import Image from "next/image";

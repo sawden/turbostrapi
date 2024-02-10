@@ -4,7 +4,8 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import type { Attribute } from "@turbostrapi/backend";
 import * as React from "react";
 
-export interface RichTextSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface RichTextSectionProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   section: Attribute.GetDynamicZoneValue<
     Attribute.DynamicZone<["sections.rich-text"]>
   >[number];

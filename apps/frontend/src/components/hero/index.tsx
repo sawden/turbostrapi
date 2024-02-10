@@ -97,7 +97,7 @@ const Hero = React.forwardRef<HTMLDivElement, HeroProps>(
         </div>
         <div className="z-50 flex flex-col items-center justify-center px-6 text-center">
           <Image
-            className="w-[160px] fill-current md:w-[200px] dark:invert"
+            className="w-[160px] fill-current dark:invert md:w-[200px]"
             alt="Turborepo wordmark"
             width={200}
             height={20}

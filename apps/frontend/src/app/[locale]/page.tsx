@@ -1,11 +1,11 @@
 import Image from "next/image";
 
+import { Hero } from "@/components/hero";
+import { sectionRenderer } from "@/components/section-renderer";
 import { fetchOneBySlug } from "@/lib/api";
 import type { APIUrlParams } from "@/lib/api/types";
 import { Callout } from "@turbostrapi/ui";
 import { notFound } from "next/navigation";
-import { sectionRenderer } from "@/components/section-renderer";
-import { Hero } from "@/components/hero";
 
 interface PageProps {
   params: {
@@ -50,7 +50,7 @@ export default async function Page({
         >
           apps/frontend
         </Callout>
-        <div className="fixed bottom-0 left-0 flex h-36 w-full items-end justify-center bg-gradient-to-t from-white via-white md:static md:h-auto md:w-auto md:bg-none dark:from-black dark:via-black">
+        <div className="fixed bottom-0 left-0 flex h-36 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black md:static md:h-auto md:w-auto md:bg-none">
           <a
             className="pointer-events-none flex place-items-center gap-2 p-8 md:pointer-events-auto md:p-0"
             href={`https://vercel.com?utm_source=turbostrapi-starter&utm_medium=basic&utm_campaign=turbostrapi-starter`}

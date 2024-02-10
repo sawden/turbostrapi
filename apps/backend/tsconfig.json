@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": ".",
-    "strictNullChecks": true,
+    "strictNullChecks": true
   },
   "include": ["./", "./**/*.ts", "./**/*.js", "src/**/*.json"],
   "exclude": [
@@ -14,6 +14,6 @@
     ".tmp/",
     "src/admin/",
     "**/*.test.*",
-    "src/plugins/**",
-  ],
+    "src/plugins/**"
+  ]
 }
